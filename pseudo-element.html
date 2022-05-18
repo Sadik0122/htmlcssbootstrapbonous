@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                   <meta charset="UTF-8">
+                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                   <title>Pseudo Element</title>
+                   <style>
+                      h1::before{
+                         content: 'Hello ';
+                         color: lime;
+                                      
+                      }
+                      h1::after{
+                          content: ' Go there';
+                          color: limegreen;               
+                      }
+                      blockquote::before{
+                          content: open-quote;
+                          color: rgb(192, 91, 7); 
+                          font-size: 1.5em;              
+                      }
+                      blockquote::after{
+                          content: close-quote;
+                          color: rgb(192, 91, 7);
+                          font-size: 1.5em;               
+                      }
+                      .section-title{
+                           display: inline-block;              
+                      }
+                      .section-title::after, 
+                      .section-title:hover:before{
+                           content: '';
+                           background-color: indigo; 
+                           height: 2px;
+                           width: 100%;
+                           display: block;
+                      }
+                   </style>
+</head>
+<body>
+         <h1>This is our heading one element</h1>  
+         <h1>This is our haeding next element</h1> 
+         <section>
+              <h2 class="section-title">Best Quotes</h2>  
+              <blockquote>This is our blockquote in this here</blockquote>
+              <blockquote>This is our next part block quote </blockquote>            
+         </section>       
+</body>
+</html>
